@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploding Message</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #0078d7;
+    color: white;
+    border-radius: 5px;
+  }
+
+  /* Overlay message styling */
+  #centerMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #222;
+    color: #fff;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Explosion animation */
+  .show {
+    animation: explode 0.6s ease forwards;
+  }
+
+  @keyframes explode {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button onclick="showMessage()">Click Me</button>
+
+<div id="centerMessage">💥 Aptitude Round get over!</div>
+
+<script>
+function showMessage() {
+  const msg = document.getElementById("centerMessage");
+  msg.classList.add("show");
+
+  // Remove the message after 2 seconds
+  setTimeout(() => {
+    msg.classList.remove("show");
+    msg.style.opacity = 0;
+  }, 5000);
+}
+</script>
+
+</body>
+</html>
