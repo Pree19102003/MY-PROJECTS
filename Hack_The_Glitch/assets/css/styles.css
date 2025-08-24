@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light gray for a clean, professional look */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap's primary color */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade for hover effect */
+}
+.navbar {
+  background: #1e1e2f;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links li a { color: #fff; transition: 0.3s; }
+.nav-links li a:hover { color: #ffcc00; }
+
+
+.navbar .navbar-brand {
+    color: #ffffff; /* White for brand text */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff; /* White for nav links */
+    transition: color 0.3s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Gold color for hover effect */
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('images/banners.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ced4da; /* Light border for sections */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* List Group Styles */
+.list-group-item {
+    border: none; /* Remove border for list items */
+    padding: 15px; /* Increased padding for better spacing */
+}
+
+/* Organizer Image Styles */
+.organizers-image {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 500px; /* Maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px auto; /* Center the image */
+    display: block; /* Centering the image */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #343a40; /* Dark gray for footer */
+    color: #ffffff; /* White text for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+}
